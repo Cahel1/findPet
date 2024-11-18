@@ -1,32 +1,14 @@
-/* Estilos para limitar el tamaño del swiper */
-.swiper-grid {
-    max-height: 100px;
-    /* Ajusta la altura según tus necesidades */
-    margin-bottom: 1px;
-    /* Espacio debajo del swiper */
-}
-
-.contenido-swiper {
-    background-size: center/cover fixed;
-}
-
-.swiper-container {
-    height: 10%;
+.container-swap {
+    width: 100%;
+    height: 700px;
+    margin: 20px auto;
     /* Asegura que el swiper ocupe todo el contenedor */
 }
 
-.swiper-image {
+.container-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos adicionales */
-.info-grid {
-    padding: 20px;
-    background-color: #f0f0f0;
 }
 
 .info-card {

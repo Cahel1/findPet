@@ -6,8 +6,8 @@
 
 <ion-content [fullscreen]="true">
   <!-- Swiper Section -->
-  <ion-grid class="contenido-swiper">
-    <swiper-container
+  <ion-grid>
+    <swiper-container class="container-swap" 
       [modules]="swiperModules"
       speed="500"
       pagination="true"
@@ -20,7 +20,7 @@
     >
       <swiper-slide *ngFor="let mascota of mascs">
         <!-- Al hacer clic en la imagen, redirige a tab-adopcion -->
-        <ion-img [src]="mascota.imagen" alt="Imagen de mascota" routerLink="/tab-adopcion"></ion-img>
+        <ion-img [src]="mascota.imagen" alt="Imagen de mascota" routerLink="/tab-adopcion" class="container-img"></ion-img>
       </swiper-slide>
     </swiper-container>
 
