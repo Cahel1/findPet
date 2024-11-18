@@ -1,0 +1,72 @@
+/* Estilos para limitar el tamaño del swiper */
+.swiper-grid {
+    max-height: 100px;
+    /* Ajusta la altura según tus necesidades */
+    margin-bottom: 1px;
+    /* Espacio debajo del swiper */
+}
+
+.contenido-swiper {
+    background-size: center/cover fixed;
+}
+
+.swiper-container {
+    height: 10%;
+    /* Asegura que el swiper ocupe todo el contenedor */
+}
+
+.swiper-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos adicionales */
+.info-grid {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.info-card {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-card-header {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+}
+
+.info-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-card-content {
+    padding: 15px;
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .info-card-img {
+        height: 150px;
+    }
+}

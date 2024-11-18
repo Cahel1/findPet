@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Bienvenidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Swiper Section -->
+  <ion-grid class="contenido-swiper">
+    <swiper-container
+      [modules]="swiperModules"
+      speed="500"
+      pagination="true"
+      navigation="true"
+      space-between="15"
+      centered-slides="true"
+      autoplay="true"
+      autoplay-delay="2500"
+      autoplay-disable-on-interaction="false"
+    >
+      <swiper-slide *ngFor="let mascota of mascs">
+        <!-- Al hacer clic en la imagen, redirige a tab-adopcion -->
+        <ion-img [src]="mascota.imagen" alt="Imagen de mascota" routerLink="/tab-adopcion"></ion-img>
+      </swiper-slide>
+    </swiper-container>
+
+  </ion-grid>
+
+  <!-- Información de adopción -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let mascota of mascs">
+        <!-- Al hacer clic en la carta, redirige a tab-adopcion -->
+        <ion-card [routerLink]="['/tab-adopcion']">
+          <img [src]="mascota.imagen" class="info-card-img" alt="Imagen de mascota">
+          <ion-card-header>
+            <ion-card-title>{{ mascota.nombre }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ mascota.desc_fisica }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
