@@ -1,54 +1,55 @@
+ion-content.background {
+  --background: url('/assets/background2.jpg') 0 0/cover no-repeat;
+  position: relative; /* Asegúrate de que el contenido sea relativo para el overlay */
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px); /* Ajusta el nivel de desenfoque aquí */
+  background-color: rgba(255, 255, 255, 0.3); /* Color semitransparente encima del fondo */
+  z-index: 1; /* Ubica el desenfoque detrás del contenido principal */
+}
+
+ion-content .container-swap,
+ion-content ion-grid {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido principal esté por encima del overlay */
+}
 .container-swap {
-    width: 100%;
-    height: 700px;
-    margin: 20px auto;
-    /* Asegura que el swiper ocupe todo el contenedor */
+  width: 100%;
+  height: 250px; /* Reduce la altura del swiper */
+  margin: 20px auto; /* Centra el swiper y le da espacio superior */
 }
 
 .container-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que no se corten las caras */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+  display: block; /* Soluciona el problema de carga inicial en blanco */
 }
 
-.info-card {
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #ffffff;
-    transition: transform 0.3s ease;
+/* Efectos en las imágenes del swiper */
+.swiper-slide {
+  transition: transform 0.3s ease; /* Animación suave al cambiar de imagen */
 }
 
-.info-card:hover {
-    transform: scale(1.05);
+.swiper-slide-active {
+  transform: scale(1.2); /* Imagen central más grande */
+  z-index: 2; /* Trae la imagen central al frente */
 }
 
-.info-card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.swiper-slide-next,
+.swiper-slide-prev {
+  transform: scale(0.9); /* Reduce el tamaño de las imágenes laterales */
+  z-index: 1;
 }
 
-.info-card-header {
-    background-color: #1a73e8;
-    color: white;
-    text-align: center;
-}
-
-.info-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.info-card-content {
-    padding: 15px;
-    color: #555;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 767px) {
-    .info-card-img {
-        height: 150px;
-    }
+/* Ocultar los puntos de paginación del swiper */
+.swiper-pagination {
+  display: none;
 }

@@ -1,43 +1,135 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Bienvenidos</ion-title>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="assets/logo-findpet.jpeg" alt="FindPet Logo" style="height: 60px; margin-right: 10px;">
+      <ion-title style="text-align: center;">Bienvenidos a FindPet</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content padding class="background">
+  <div class="blur-overlay"></div>
+
   <!-- Swiper Section -->
   <ion-grid>
-    <swiper-container class="container-swap" 
+    <swiper-container
+      class="container-swap"
       [modules]="swiperModules"
       speed="500"
-      pagination="true"
       navigation="true"
       space-between="15"
       centered-slides="true"
       autoplay="true"
       autoplay-delay="2500"
       autoplay-disable-on-interaction="false"
+      slides-per-view="1.5"
     >
       <swiper-slide *ngFor="let mascota of mascs">
-        <!-- Al hacer clic en la imagen, redirige a tab-adopcion -->
-        <ion-img [src]="mascota.imagen" alt="Imagen de mascota" routerLink="/tab-adopcion" class="container-img"></ion-img>
+        <ion-img
+          [src]="mascota.imagen"
+          alt="Imagen de mascota"
+          routerLink="/tab-adopcion"
+          class="container-img"
+        ></ion-img>
       </swiper-slide>
     </swiper-container>
-
   </ion-grid>
 
-  <!-- Información de adopción -->
+  <!-- Información sobre adopción -->
   <ion-grid>
     <ion-row>
-      <ion-col size="12" size-md="6" *ngFor="let mascota of mascs">
-        <!-- Al hacer clic en la carta, redirige a tab-adopcion -->
-        <ion-card [routerLink]="['/tab-adopcion']">
-          <img [src]="mascota.imagen" class="info-card-img" alt="Imagen de mascota">
+      <ion-col size="12" size-md="6">
+        <!-- Pilar 1 -->
+        <ion-card>
           <ion-card-header>
-            <ion-card-title>{{ mascota.nombre }}</ion-card-title>
+            <ion-card-title>Beneficios de la adopción</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            {{ mascota.desc_fisica }}
+            <ul>
+              <li>Salvas la vida de un animal y le das un hogar lleno de amor.</li>
+              <li>Los animales adoptados son increíblemente leales y agradecidos.</li>
+              <li>Contribuyes a reducir la sobrepoblación en refugios.</li>
+              <li>Adoptar es más económico que comprar una mascota de raza.</li>
+              <li>Fomenta la tenencia responsable y combate el comercio ilegal.</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Consejos para una adopción exitosa</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              Antes de adoptar, asegúrate de estar listo para el compromiso de tiempo y
+              recursos. Investiga sobre el tipo de animal que encaja con tu estilo de vida.
+            </p>
+            <p>
+              Prepara tu hogar para recibir a tu nueva mascota: crea un espacio seguro,
+              ten comida adecuada y busca un veterinario de confianza.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="6">
+        <!-- Pilar 2 -->
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Historias de vida transformadas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="assets/testimonial1.jpg" alt="Persona 1">
+              </ion-avatar>
+              <ion-label>
+                <h3>María Gómez</h3>
+                <p>
+                  "Adoptar a Luna fue lo mejor que hice. Ahora, nunca me siento sola."
+                </p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="assets/testimonial2.jpg" alt="Persona 2">
+              </ion-avatar>
+              <ion-label>
+                <h3>Carlos Rivera</h3>
+                <p>
+                  "Rocky me enseñó lo que significa el amor incondicional. Mi vida cambió."
+                </p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img src="assets/testimonial3.jpg" alt="Persona 3">
+              </ion-avatar>
+              <ion-label>
+                <h3>Ana López</h3>
+                <p>
+                  "Nunca pensé que adoptar a Max me haría una persona más feliz y empática."
+                </p>
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>¿Por qué elegir adoptar?</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              Adoptar una mascota significa abrir tu corazón a un ser que necesita amor.
+              No solo cambia la vida del animal, sino también la tuya, brindándote alegría y
+              compañía.
+            </p>
+            <p>
+              Más que una mascota, estarás ganando un amigo para toda la vida.
+            </p>
           </ion-card-content>
         </ion-card>
       </ion-col>
