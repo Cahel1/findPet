@@ -1,3 +1,4 @@
+bash```
 # FindPet 🐾  
 ¡Conecta animales necesitados con familias amorosas!
 
