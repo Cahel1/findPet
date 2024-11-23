@@ -1,4 +1,3 @@
-bash```
 # FindPet 🐾  
 ¡Conecta animales necesitados con familias amorosas!
 
@@ -33,7 +32,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 1. Clona este repositorio: 
   git clone [https://github.com/Cahel1/findPet.git]
 2.	Entra al directorio del proyecto:
-   cd findpet
+  ### cd findpet
 3.	Instala las dependencias:
   npm install
 4.	Inicia la aplicación:
