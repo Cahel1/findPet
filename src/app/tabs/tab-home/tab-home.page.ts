@@ -42,6 +42,6 @@ export class TabHomePage implements OnInit {
 
   // Función para limpiar etiquetas HTML
   stripHTML(html: string): string {
-    return html ? html.replace(/<\/?[^>]+(>|$)/g, '') : ''; // Remueve etiquetas HTML
+    return html ? html.replace(/<\/?[^>]+(>|$)/g, '') : '';
   }
 }

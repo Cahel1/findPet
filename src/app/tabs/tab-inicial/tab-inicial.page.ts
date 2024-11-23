@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
 import { library, playCircle, radio, search } from 'ionicons/icons';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';  // Importar el plugin de la cámara
 
 @Component({
   selector: 'app-tab-inicial',
@@ -9,9 +10,24 @@ import { library, playCircle, radio, search } from 'ionicons/icons';
 })
 export class TabInicialPage implements OnInit {
 
-  constructor() { addIcons({ library, playCircle, radio, search });}
-
-  ngOnInit() {
+  constructor() {
+    addIcons({ library, playCircle, radio, search });
   }
 
+  ngOnInit() {}
+
+  // Función para abrir la cámara
+  async openCamera() {
+    try {
+      const image = await Camera.getPhoto({
+        resultType: CameraResultType.Uri,
+        source: CameraSource.Camera,  // Corregido aquí para usar 'CameraSource.Camera'
+        quality: 100,
+      });
+      console.log('Imagen capturada:', image);
+      // Aquí puedes manejar la imagen tomada, por ejemplo, mostrarla en la interfaz de usuario
+    } catch (error) {
+      console.error('Error al abrir la cámara:', error);
+    }
+  }
 }

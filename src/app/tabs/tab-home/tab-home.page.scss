@@ -1,6 +1,6 @@
 ion-content.background {
   --background: url('/assets/background2.jpg') 0 0/cover no-repeat;
-  position: relative; /* Asegúrate de que el contenido sea relativo para el overlay */
+  position: relative;
 }
 
 .blur-overlay {
@@ -9,47 +9,46 @@ ion-content.background {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(4px); /* Ajusta el nivel de desenfoque aquí */
-  background-color: rgba(255, 255, 255, 0.3); /* Color semitransparente encima del fondo */
-  z-index: 1; /* Ubica el desenfoque detrás del contenido principal */
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
 }
 
 ion-content .container-swap,
 ion-content ion-grid {
   position: relative;
-  z-index: 2; /* Asegura que el contenido principal esté por encima del overlay */
+  z-index: 2;
 }
+
 .container-swap {
   width: 100%;
-  height: 250px; /* Reduce la altura del swiper */
-  margin: 20px auto; /* Centra el swiper y le da espacio superior */
+  height: 250px;
+  margin: 20px auto;
 }
 
 .container-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que no se corten las caras */
-  border-radius: 10px; /* Bordes redondeados para las imágenes */
-  display: block; /* Soluciona el problema de carga inicial en blanco */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
 }
 
-/* Efectos en las imágenes del swiper */
 .swiper-slide {
-  transition: transform 0.3s ease; /* Animación suave al cambiar de imagen */
+  transition: transform 0.3s ease;
 }
 
 .swiper-slide-active {
-  transform: scale(1.2); /* Imagen central más grande */
-  z-index: 2; /* Trae la imagen central al frente */
+  transform: scale(1.2);
+  z-index: 2;
 }
 
 .swiper-slide-next,
 .swiper-slide-prev {
-  transform: scale(0.9); /* Reduce el tamaño de las imágenes laterales */
+  transform: scale(0.9);
   z-index: 1;
 }
 
-/* Ocultar los puntos de paginación del swiper */
 .swiper-pagination {
   display: none;
 }

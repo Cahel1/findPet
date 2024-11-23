@@ -24,6 +24,7 @@ const routes: Routes = [
         path: 'tab-perfil',
         loadChildren: () => import('../tab-perfil/tab-perfil.module').then( m => m.TabPerfilPageModule)
       },
+
     ]
   }
 ];
