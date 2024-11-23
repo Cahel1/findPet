@@ -43,18 +43,23 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 	1.	Explora las categorías de adopción disponibles.
 	2.	Visualiza detalles de cada mascota y contacta para adoptar.
 	3.	Lee testimonios y consejos para convertirte en un dueño responsable.
- 
+
 🤝 Contribuir
-bash```
+
 ¿Quieres ayudar? Sigue estos pasos: 
   1.	Haz un fork del repositorio.
-  2.	Crea una nueva rama: 
-  #git checkout -b mi-nueva-rama 
-  3.	Realiza los cambios y haz un commit: 
+  2.	Crea una nueva rama:
+ bash```
+  #git checkout -b mi-nueva-rama
+```
+
+  4.	Realiza los cambios y haz un commit:
+ bash```
   #git commit -m "Descripción de los cambios"
-  4.	Envía tus cambios al repositorio remoto: 
+ ```
+  5.	Envía tus cambios al repositorio remoto: 
   ###git push origin mi-nueva-rama
-  5.	Abre un Pull Request en este repositorio.
+  6.	Abre un Pull Request en este repositorio.
  
 📜 Licencia
 Este proyecto está bajo la Licencia MIT - Puedes usarlo, modificarlo y distribuirlo libremente.
