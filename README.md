@@ -1,5 +1,4 @@
-![logo-findpet](https://github.com/user-attachments/assets/b33bb280-2edf-4de4-a943-255b574b87c7)
-
+![logo 4](https://github.com/user-attachments/assets/7b2fea9a-4536-49ad-ac3a-578bbbef1dfc)
 # FindPet 🐾                                                   ¡Conecta animales necesitados con familias amorosas!
 
 **FindPet** es una aplicación que promueve la adopción responsable de mascotas, ayudando a reducir el abandono animal y educando a las personas sobre el bienestar animal.  
