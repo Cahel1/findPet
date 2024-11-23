@@ -45,7 +45,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 ---
 ## 🤝 Contribuir
 
-#🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
+# 🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
 
  1. Haz un fork del repositorio.
 
