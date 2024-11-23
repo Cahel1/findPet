@@ -1,5 +1,4 @@
-# FindPet 🐾  
-¡Conecta animales necesitados con familias amorosas!
+# FindPet 🐾                                                   ¡Conecta animales necesitados con familias amorosas!
 
 **FindPet** es una aplicación que promueve la adopción responsable de mascotas, ayudando a reducir el abandono animal y educando a las personas sobre el bienestar animal.  
 Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales como de sus nuevos dueños.
@@ -50,7 +49,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
  1. Haz un fork del repositorio.
 
  2. Crea una nueva rama:
-## ```bash git checkout -b mi-nueva-rama ```##
+ ```bash git checkout -b mi-nueva-rama ```
 
  3. Realiza los cambios y haz un commit:
 ```bash git commit -m "Descripción de los cambios"```
