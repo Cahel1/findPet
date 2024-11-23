@@ -48,19 +48,18 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 
 ## 🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
 
-# 1. Haz un fork del repositorio.
-# (Este paso se realiza en la página del repositorio en GitHub)
+ 1. Haz un fork del repositorio.
 
-# 2. Crea una nueva rama:
+ 2. Crea una nueva rama:
 ```bash git checkout -b mi-nueva-rama ```
 
-# 3. Realiza los cambios y haz un commit:
+ 3. Realiza los cambios y haz un commit:
 ```bash git commit -m "Descripción de los cambios"```
 
-# 4. Envía tus cambios al repositorio remoto:
+ 4. Envía tus cambios al repositorio remoto:
 ```bash git push origin mi-nueva-rama```
 
-# 5. Abre un Pull Request en este repositorio.
+ 5. Abre un Pull Request en este repositorio.
  
 📜 Licencia
 Este proyecto está bajo la Licencia MIT - Puedes usarlo, modificarlo y distribuirlo libremente.
