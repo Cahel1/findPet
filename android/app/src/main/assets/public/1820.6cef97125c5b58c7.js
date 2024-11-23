@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[1820],{1820:(c,l,a)=>{a.r(l),a.d(l,{TabInicialPageModule:()=>E});var i=a(177),u=a(4341),M=a(3465),P=a(7314),o=a(4438);let E=(()=>{var n;class _{}return(n=_).\u0275fac=function(t){return new(t||n)},n.\u0275mod=o.$C({type:n}),n.\u0275inj=o.G2t({imports:[i.MD,u.YN,M.bv,P.TabInicialPageRoutingModule]}),_})()}}]);
