@@ -31,7 +31,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 ### Pasos  
 1. Clona este repositorio:  
    ```bash
-  git clone https://github.com/bastian/findpet.git
+  git clone [https://github.com/Cahel1/findPet.git]
 2.	Entra al directorio del proyecto:
    cd findpet
 3.	Instala las dependencias:
