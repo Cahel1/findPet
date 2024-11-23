@@ -1,5 +1,6 @@
+![avatar-placeholder](https://github.com/user-attachments/assets/599e2d43-1cd1-4cd4-a478-cf611067920a)
 # FindPet 🐾                                                   ¡Conecta animales necesitados con familias amorosas!
----![avatar-placeholder](https://github.com/user-attachments/assets/599e2d43-1cd1-4cd4-a478-cf611067920a)
+
 **FindPet** es una aplicación que promueve la adopción responsable de mascotas, ayudando a reducir el abandono animal y educando a las personas sobre el bienestar animal.  
 Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales como de sus nuevos dueños.
 
@@ -17,9 +18,9 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 - **Ionic**: Framework para el desarrollo de aplicaciones móviles.  
 - **Angular**: Estructuración y gestión del proyecto.  
 - **Swiper.js**: Implementación de carruseles para mostrar imágenes.  
-- **AOS (Animate on Scroll)**: Animaciones dinámicas para mejorar la experiencia visual.  
+- **AOS (Animate on Scroll)**: Animaciones dinámicas para mejorar la experiencia visual.
 
-
+---
 
 ## 📦 Instalación  
 
@@ -44,7 +45,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 ---
 ## 🤝 Contribuir
 
-# 🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
+🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
 
  1. Haz un fork del repositorio.
 
