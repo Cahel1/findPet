@@ -24,15 +24,15 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 
 ## 📦 Instalación  
 
-### Requisitos previos  
+## Requisitos previos  
 - Node.js instalado.  
 - Ionic CLI configurado.  
 
-### Pasos  
+# Pasos  
 1. Clona este repositorio: 
   git clone [https://github.com/Cahel1/findPet.git]
 2.	Entra al directorio del proyecto:
-  ### cd findpet
+  # cd findpet
 3.	Instala las dependencias:
   npm install
 4.	Inicia la aplicación:
@@ -59,9 +59,12 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 ```bash git push origin mi-nueva-rama```
 
  5. Abre un Pull Request en este repositorio.
+
 --- 
+
 ## 📜 Licencia
 Este proyecto está bajo la Licencia MIT - Puedes usarlo, modificarlo y distribuirlo libremente.
+
 ---
 ## 💌 Contacto
 
