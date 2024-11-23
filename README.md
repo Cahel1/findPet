@@ -29,8 +29,7 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 - Ionic CLI configurado.  
 
 ### Pasos  
-1. Clona este repositorio:  
-   ```bash
+1. Clona este repositorio: 
   git clone [https://github.com/Cahel1/findPet.git]
 2.	Entra al directorio del proyecto:
    cd findpet
