@@ -1,4 +1,5 @@
-![avatar-placeholder](https://github.com/user-attachments/assets/599e2d43-1cd1-4cd4-a478-cf611067920a)
+![logo-findpet](https://github.com/user-attachments/assets/b33bb280-2edf-4de4-a943-255b574b87c7)
+
 # FindPet 🐾                                                   ¡Conecta animales necesitados con familias amorosas!
 
 **FindPet** es una aplicación que promueve la adopción responsable de mascotas, ayudando a reducir el abandono animal y educando a las personas sobre el bienestar animal.  
@@ -26,50 +27,69 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 
 ## Requisitos previos  
 - Node.js instalado.  
-- Ionic CLI configurado.  
+- Ionic CLI configurado.
 
-# Pasos  
+### Pasos 🐾 
 1. Clona este repositorio: 
-  git clone [https://github.com/Cahel1/findPet.git]
-2.	Entra al directorio del proyecto:
-  # cd findpet
-3.	Instala las dependencias:
-  npm install
-4.	Inicia la aplicación:
-  ionic serve
+   ```bash
+   git clone [https://github.com/Cahel1/findPet.git]
+   ```
+2. Entra al directorio del proyecto:
+   ```bash
+   cd findpet
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Inicia la aplicación:
+   ```bash
+   ionic serve
+   ```
+
 ---
+
 ## ✨ Uso
-	1.	Explora las categorías de adopción disponibles.
-	2.	Visualiza detalles de cada mascota y contacta para adoptar.
-	3.	Lee testimonios y consejos para convertirte en un dueño responsable.
+1. Explora las categorías de adopción disponibles.  
+2. Visualiza detalles de cada mascota y contacta para adoptar.  
+3. Lee testimonios y consejos para convertirte en un dueño responsable.
+
 ---
+
 ## 🤝 Contribuir
 
 🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
 
- 1. Haz un fork del repositorio.
+1. Haz un fork del repositorio.
 
- 2. Crea una nueva rama:
- ```bash git checkout -b mi-nueva-rama ```
+2. Crea una nueva rama:
+   ```bash
+   git checkout -b mi-nueva-rama
+   ```
 
- 3. Realiza los cambios y haz un commit:
-```bash git commit -m "Descripción de los cambios"```
+3. Realiza los cambios y haz un commit:
+   ```bash
+   git commit -m "Descripción de los cambios"
+   ```
 
- 4. Envía tus cambios al repositorio remoto:
-```bash git push origin mi-nueva-rama```
+4. Envía tus cambios al repositorio remoto:
+   ```bash
+   git push origin mi-nueva-rama
+   ```
 
- 5. Abre un Pull Request en este repositorio.
+5. Abre un Pull Request en este repositorio.
 
---- 
+---
 
 ## 📜 Licencia
 Este proyecto está bajo la Licencia MIT - Puedes usarlo, modificarlo y distribuirlo libremente.
 
 ---
+
 ## 💌 Contacto
 
 Si tienes alguna duda, comentario o sugerencia, no dudes en contactarnos:
-	•	Email: support@findpet.com
-	•	GitHub: FindPet en GitHub
+- Email: support@findpet.com  
+- GitHub: [FindPet en GitHub](https://github.com/FindPet)
 
 ¡Gracias por ser parte del cambio! 🐾
