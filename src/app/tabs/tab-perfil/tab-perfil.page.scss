@@ -16,10 +16,10 @@
   width: 120px;
   height: 120px;
   margin: 0 auto;
-  border: 4px solid #ffd700; /* Borde dorado */
+  border: 4px solid #ffd700;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #ffffff; /* Fondo blanco para resaltar */
+  background-color: #ffffff;
 }
 
 /* Nombre de usuario */
@@ -34,7 +34,7 @@
 .email {
   font-size: 16px;
   color: #000000;
-  margin-top: 10px; /* Añadido margen para separarlo del nombre */
+  margin-top: 10px;
 }
 
 /* Barra separadora */
@@ -49,30 +49,30 @@
 .profile-options ion-item {
   --background: transparent;
   --border-color: rgba(255, 255, 255, 0.2);
-  color: #000000; /* Color negro por defecto */
+  color: #000000;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .profile-options ion-item:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .profile-options ion-label {
-  color: #000000; /* Texto en negro por defecto */
+  color: #000000;
   font-size: 16px;
 }
 
 /* Íconos de las opciones del perfil */
 .profile-options ion-icon {
-  color: #ffd700; /* Color dorado para los íconos */
+  color: #ffd700;
 }
 
 /* Cambiar color a azul cuando el mouse pasa por encima */
 .profile-options ion-item:hover ion-label {
-  color: #0000FF; /* Azul cuando el mouse pasa por encima */
+  color: #0000FF;
 }
 
 .profile-options ion-item:hover ion-icon {
-  color: #0000FF; /* Azul para el icono también al pasar el mouse */
+  color: #0000FF;
 }

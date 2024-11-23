@@ -21,11 +21,10 @@ export class TabInicialPage implements OnInit {
     try {
       const image = await Camera.getPhoto({
         resultType: CameraResultType.Uri,
-        source: CameraSource.Camera,  // Corregido aquí para usar 'CameraSource.Camera'
+        source: CameraSource.Camera,
         quality: 100,
       });
       console.log('Imagen capturada:', image);
-      // Aquí puedes manejar la imagen tomada, por ejemplo, mostrarla en la interfaz de usuario
     } catch (error) {
       console.error('Error al abrir la cámara:', error);
     }

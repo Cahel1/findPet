@@ -22,10 +22,10 @@ export class TabAdopcionPage implements OnInit {
     const petitos = localStorage.getItem('mascotas');
     if (petitos) {
       this.mascs = JSON.parse(petitos);
-      console.log('Obtiene mascotas desde el local storage');
+      // console.log('Obtiene mascotas desde el local storage');
     } else {
       this.apiPetService.obtenerPets().subscribe((respuesta) => {
-        console.log('Obtiene mascotas desde API');
+        // console.log('Obtiene mascotas desde API');
         // Limpia las etiquetas HTML antes de asignar los datos
         this.mascs = respuesta.data.map((masc) => ({
           ...masc,
@@ -35,7 +35,7 @@ export class TabAdopcionPage implements OnInit {
         }));
         // Se almacena en localStorage
         localStorage.setItem('mascotas', JSON.stringify(this.mascs));
-        console.log('Almacena en localStorage');
+        // console.log('Almacena en localStorage');
       });
     }
   }
