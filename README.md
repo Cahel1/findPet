@@ -37,15 +37,15 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
   npm install
 4.	Inicia la aplicación:
   ionic serve
-
-✨ Uso
+---
+## ✨ Uso
 	1.	Explora las categorías de adopción disponibles.
 	2.	Visualiza detalles de cada mascota y contacta para adoptar.
 	3.	Lee testimonios y consejos para convertirte en un dueño responsable.
+---
+## 🤝 Contribuir
 
-🤝 Contribuir
-
-## 🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
+#🧑‍💻 ¿Quieres ayudar? Sigue estos pasos:
 
  1. Haz un fork del repositorio.
 
@@ -59,11 +59,11 @@ Con una interfaz amigable y moderna, busca cambiar vidas, tanto de los animales 
 ```bash git push origin mi-nueva-rama```
 
  5. Abre un Pull Request en este repositorio.
- 
-📜 Licencia
+--- 
+## 📜 Licencia
 Este proyecto está bajo la Licencia MIT - Puedes usarlo, modificarlo y distribuirlo libremente.
-
-💌 Contacto
+---
+## 💌 Contacto
 
 Si tienes alguna duda, comentario o sugerencia, no dudes en contactarnos:
 	•	Email: support@findpet.com
