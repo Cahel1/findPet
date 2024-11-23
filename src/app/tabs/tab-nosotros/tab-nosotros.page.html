@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Sobre Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Imagen de encabezado -->
+  <ion-img src="assets/helping-animals.jpg" class="header-image"></ion-img>
+
+  <!-- Título principal -->
+  <ion-text class="title">
+    <h1>Bienvenidos a FindPet</h1>
+  </ion-text>
+
+  <!-- Descripción -->
+  <p class="description">
+    En FindPet, nuestra misión es conectar a animales necesitados con personas que les den un hogar lleno de amor. Creemos en el poder de la adopción para cambiar vidas, tanto de los animales como de sus nuevos dueños.
+  </p>
+
+  <!-- Nuestra meta -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuestra Meta</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ayudar a reducir el número de animales abandonados, promoviendo la adopción responsable y educando sobre el bienestar animal.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Imágenes inspiradoras -->
+  <ion-slides pager="true">
+    <ion-slide>
+      <ion-img src="assets/img/animal-care1.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/img/animal-care2.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/img/animal-care3.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Valores y visión -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuestros Valores</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Compasión por todos los seres vivos.</li>
+        <li>Promoción del respeto hacia los animales.</li>
+        <li>Compromiso con la adopción responsable.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Llamado a la acción -->
+  <ion-button expand="block" color="primary" routerLink="/adoptar">
+    ¡Únete a nuestra causa!
+  </ion-button>
+</ion-content>

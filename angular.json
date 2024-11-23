@@ -31,7 +31,11 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "node_modules/swiper/swiper-bundle.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -65,7 +69,7 @@
               "namedChunks": true
             },
             "ci": {
-              "progress": false
+    
             }
           },
           "defaultConfiguration": "production"
@@ -80,7 +84,7 @@
               "buildTarget": "app:build:development"
             },
             "ci": {
-              "progress": false
+     
             }
           },
           "defaultConfiguration": "development"
@@ -111,13 +115,15 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
             "ci": {
-              "progress": false,
-              "watch": false
+
             }
           }
         },
@@ -136,7 +142,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
