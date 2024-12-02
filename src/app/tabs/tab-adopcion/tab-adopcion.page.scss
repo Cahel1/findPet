@@ -72,3 +72,18 @@ ion-button {
     font-size: 1.4rem;
   }
 }
+ion-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-row {
+  justify-content: center;
+  align-items: center;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+}
