@@ -6,25 +6,30 @@
 
 <ion-content class="ion-padding">
   <ion-grid>
-    <ion-row>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
       <ion-col size="12" size-md="6" size-lg="4" *ngFor="let masc of mascs">
         <ion-card class="mascota-card">
           <!-- Imagen -->
           <img alt="Imagen de la mascota" [src]="masc.imagen" class="card-image" (error)="masc.imagen = 'assets/default-image.png'" />
+
           <!-- Encabezado -->
           <ion-card-header>
             <ion-card-title class="card-title">{{ masc.nombre }}</ion-card-title>
-            <ion-card-subtitle class="card-subtitle">{{ masc.desc_fisica }}</ion-card-subtitle>
-            <ion-card-subtitle class="card-subtitle">{{ masc.desc_personalidad }}</ion-card-subtitle>
-            <ion-card-subtitle class="card-subtitle">{{ masc.desc_adicional }}</ion-card-subtitle>
+            <ion-card-subtitle class="card-subtitle">{{ masc.tipo}}</ion-card-subtitle>
           </ion-card-header>
+
           <!-- Contenido -->
           <ion-card-content class="card-content">
-            Tipo: {{ masc.tipo }}
-            <!-- Botones de acción -->
+            <div class="description">
+              <p><strong>Descripción física:</strong> {{ masc.desc_fisica }}</p>
+              <p><strong>Personalidad:</strong> {{ masc.desc_personalidad }}</p>
+              <p><strong>Comuna:</strong> {{ masc.comuna }}</p>
+              <p><strong>Edad:</strong> {{ masc.edad }}</p>
+            </div>
+
+            <!-- Botón de acción -->
             <div class="button-group">
-              <ion-button color="success" expand="block">Adoptar</ion-button>
-              <ion-button color="primary" expand="block">Ver más detalles</ion-button>
+              <ion-button color="success" expand="block" (click)="adoptarMascota(masc)">Adoptar</ion-button>
             </div>
           </ion-card-content>
         </ion-card>
