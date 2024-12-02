@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volverHome()">Volver</ion-button>
+    </ion-buttons>
+    <ion-title>Nueva Mascota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <!-- Mostrar la imagen capturada -->
+    <ion-img class="centered-image" [src]="capturedImage" *ngIf="capturedImage"></ion-img>
+
+    <!-- Formulario para los datos -->
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Tipo de Animal</ion-label>
+        <ion-select [(ngModel)]="tipo">
+          <ion-select-option value="Perro">Perro</ion-select-option>
+          <ion-select-option value="Gato">Gato</ion-select-option>
+          <ion-select-option value="Conejo">Conejo</ion-select-option>
+          <ion-select-option value="Roedor">Roedor</ion-select-option>
+          <ion-select-option value="Ave">Ave</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="descripcion"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Edad</ion-label>
+        <ion-input [(ngModel)]="edad" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo de Contacto</ion-label>
+        <ion-input [(ngModel)]="correo" type="email"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="primary" (click)="enviarMascota()">Enviar Mascota</ion-button>
+  </div>
+</ion-content>
