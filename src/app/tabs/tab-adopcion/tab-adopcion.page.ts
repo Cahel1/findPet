@@ -64,6 +64,10 @@ export class TabAdopcionPage implements OnInit {
           type: 'tel',
           placeholder: 'Ejemplo: 912345678',
           id: 'phone-input',
+          attributes: {
+            inputmode: 'tel',
+            maxlength: 9,
+          },
         },
       ],
       buttons: [
