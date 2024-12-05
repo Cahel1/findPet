@@ -3,7 +3,7 @@ export interface petInterface {
         links: Links
         meta: Meta
 }
-  
+
   export interface pets {
     id: number
     nombre: string
@@ -23,14 +23,14 @@ export interface petInterface {
     comuna: string
     url: string
   }
-  
+
   export interface Links {
     first: string
     last: string
     prev: any
     next: any
   }
-  
+
   export interface Meta {
     current_page: number
     from: number
@@ -41,10 +41,9 @@ export interface petInterface {
     to: number
     total: number
   }
-  
+
   export interface Link {
     url?: string
     label: string
     active: boolean
   }
-  

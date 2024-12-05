@@ -21,10 +21,9 @@ const routes: Routes = [
         loadChildren: () => import('../tab-nosotros/tab-nosotros.module').then( m => m.TabNosotrosPageModule)
       },
       {
-        path: 'tab-perfil',
-        loadChildren: () => import('../tab-perfil/tab-perfil.module').then( m => m.TabPerfilPageModule)
+        path: 'nueva-mascota',
+        loadChildren: () => import('../nueva-mascota/nueva-mascota.module').then( m => m.NuevaMascotaPageModule)
       },
-
     ]
   }
 ];
