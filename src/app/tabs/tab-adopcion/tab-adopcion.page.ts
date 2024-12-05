@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular'; // Para manejar alertas
+import { AlertController } from '@ionic/angular';
 import { pets } from 'src/app/interface/pet-interface';
 import { ApiPetService } from 'src/app/services/api-pet.service';
 
@@ -13,7 +13,7 @@ export class TabAdopcionPage implements OnInit {
 
   constructor(
     private apiPetService: ApiPetService, // Servicio API
-    private alertController: AlertController // AlertController para los datos adoptar
+    private alertController: AlertController
   ) {}
 
   ngOnInit(): void {
@@ -44,7 +44,7 @@ export class TabAdopcionPage implements OnInit {
 
   // Validar formato del teléfono
   isValidPhone(phone: string): boolean {
-    const phonePattern = /^[0-9]{8}$/; // Ajusta el patrón según el formato que necesites
+    const phonePattern = /^[0-9]{8}$/;
     return phonePattern.test(phone);
   }
 
@@ -63,7 +63,7 @@ export class TabAdopcionPage implements OnInit {
           name: 'phone',
           type: 'tel',
           placeholder: 'Ejemplo: +56 9 12312123',
-          id: 'phone-input', // ID para poder manipularlo visualmente
+          id: 'phone-input',
         },
       ],
       buttons: [
@@ -101,32 +101,6 @@ export class TabAdopcionPage implements OnInit {
         },
       ],
     });
-
     await alert.present();
-
-  //   // Añadir el prefijo (+569) visualmente al input de teléfono
-  //   const phoneInput = document.querySelector('#phone-input');
-  //   if (phoneInput) {
-  //     const parentDiv = phoneInput.parentElement;
-
-  //     // Crear el contenedor flex
-  //     const phoneContainer = document.createElement('div');
-  //     phoneContainer.style.display = 'flex';
-  //     phoneContainer.style.alignItems = 'center';
-
-  //     const prefix = document.createElement('span');
-  //     prefix.textContent = '(+569)';
-  //     prefix.style.marginRight = '8px';
-  //     prefix.style.color = 'black';
-  //     prefix.style.fontSize = '16px';
-  //     prefix.style.fontWeight = 'bold';
-
-  //     // Colocar el prefijo y el input dentro del contenedor flex
-  //     phoneContainer.appendChild(prefix);
-  //     phoneContainer.appendChild(phoneInput);
-
-  //     // Reemplaza el div original con el nuevo contenedor flex
-  //     parentDiv?.appendChild(phoneContainer);
-  //   }
   }
 }
