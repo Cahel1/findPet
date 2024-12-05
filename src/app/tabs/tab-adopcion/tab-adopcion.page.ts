@@ -62,7 +62,7 @@ export class TabAdopcionPage implements OnInit {
         {
           name: 'phone',
           type: 'tel',
-          placeholder: 'Ejemplo: 12312123',
+          placeholder: 'Ejemplo: +56 9 12312123',
           id: 'phone-input', // ID para poder manipularlo visualmente
         },
       ],
@@ -104,29 +104,29 @@ export class TabAdopcionPage implements OnInit {
 
     await alert.present();
 
-    // Añadir el prefijo (+569) visualmente al input de teléfono
-    const phoneInput = document.querySelector('#phone-input');
-    if (phoneInput) {
-      const parentDiv = phoneInput.parentElement;
+  //   // Añadir el prefijo (+569) visualmente al input de teléfono
+  //   const phoneInput = document.querySelector('#phone-input');
+  //   if (phoneInput) {
+  //     const parentDiv = phoneInput.parentElement;
 
-      // Crear el contenedor flex
-      const phoneContainer = document.createElement('div');
-      phoneContainer.style.display = 'flex';
-      phoneContainer.style.alignItems = 'center';
+  //     // Crear el contenedor flex
+  //     const phoneContainer = document.createElement('div');
+  //     phoneContainer.style.display = 'flex';
+  //     phoneContainer.style.alignItems = 'center';
 
-      const prefix = document.createElement('span');
-      prefix.textContent = '(+569)';
-      prefix.style.marginRight = '8px';
-      prefix.style.color = 'black';
-      prefix.style.fontSize = '16px';
-      prefix.style.fontWeight = 'bold';
+  //     const prefix = document.createElement('span');
+  //     prefix.textContent = '(+569)';
+  //     prefix.style.marginRight = '8px';
+  //     prefix.style.color = 'black';
+  //     prefix.style.fontSize = '16px';
+  //     prefix.style.fontWeight = 'bold';
 
-      // Colocar el prefijo y el input dentro del contenedor flex
-      phoneContainer.appendChild(prefix);
-      phoneContainer.appendChild(phoneInput);
+  //     // Colocar el prefijo y el input dentro del contenedor flex
+  //     phoneContainer.appendChild(prefix);
+  //     phoneContainer.appendChild(phoneInput);
 
-      // Reemplaza el div original con el nuevo contenedor flex
-      parentDiv?.appendChild(phoneContainer);
-    }
+  //     // Reemplaza el div original con el nuevo contenedor flex
+  //     parentDiv?.appendChild(phoneContainer);
+  //   }
   }
 }
