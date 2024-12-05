@@ -44,7 +44,7 @@ export class TabAdopcionPage implements OnInit {
 
   // Validar formato del teléfono
   isValidPhone(phone: string): boolean {
-    const phonePattern = /^[0-9]{8}$/;
+    const phonePattern = /^[0-9]{9}$/;
     return phonePattern.test(phone);
   }
 
@@ -62,8 +62,12 @@ export class TabAdopcionPage implements OnInit {
         {
           name: 'phone',
           type: 'tel',
-          placeholder: 'Ejemplo: +56 9 12312123',
+          placeholder: 'Ejemplo: 912345678',
           id: 'phone-input',
+          attributes: {
+            inputmode: 'tel',
+            maxlength: 9,
+          },
         },
       ],
       buttons: [
@@ -101,6 +105,7 @@ export class TabAdopcionPage implements OnInit {
         },
       ],
     });
+
     await alert.present();
   }
 }
