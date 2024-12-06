@@ -11,7 +11,7 @@ describe('TabInicialPage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('debería instanciar correctamente el componente TabInicialPage', () => {
     expect(component).toBeTruthy();
   });
 });

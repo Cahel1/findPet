@@ -23,16 +23,16 @@ describe('TabNosotrosPage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('debería crear correctamente el componente TabNosotrosPage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate email correctly', () => {
+  it('debería validar correctamente el formato de un correo electrónico', () => {
     expect(component.isValidEmail('test@example.com')).toBeTrue();
-    expect(component.isValidEmail('invalid-email')).toBeFalse();
+    expect(component.isValidEmail('correo-invalido')).toBeFalse();
   });
 
-  it('should show an alert for joining the cause', async () => {
+  it('debería mostrar una alerta para unirse a la causa', async () => {
     alertControllerSpy.create.and.returnValue(
       Promise.resolve({
         present: jasmine.createSpy('present'),
@@ -49,7 +49,7 @@ describe('TabNosotrosPage', () => {
     );
   });
 
-  it('should handle valid email submission', async () => {
+  it('debería manejar correctamente el envío de un correo válido', async () => {
     alertControllerSpy.create.and.returnValue(
       Promise.resolve({
         present: jasmine.createSpy('present'),
@@ -74,7 +74,7 @@ describe('TabNosotrosPage', () => {
     );
   });
 
-  it('should handle invalid email submission', async () => {
+  it('debería manejar correctamente el envío de un correo inválido', async () => {
     alertControllerSpy.create.and.returnValue(
       Promise.resolve({
         present: jasmine.createSpy('present'),
@@ -82,7 +82,7 @@ describe('TabNosotrosPage', () => {
           {
             text: 'Unirme',
             handler: (data: any) => {
-              expect(data.email).toBe('invalid-email');
+              expect(data.email).toBe('correo-invalido');
               return false;
             },
           },

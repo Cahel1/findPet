@@ -29,7 +29,6 @@ describe('TabAdopcionPage', () => {
     apiPetService = TestBed.inject(ApiPetService);
     fixture.detectChanges();
 
-    // Inicializar el espía antes de cada prueba
     alertControllerSpy = spyOn(component['alertController'], 'create').and.callFake(async (options: any) => {
       return {
         present: async () => {
@@ -43,17 +42,15 @@ describe('TabAdopcionPage', () => {
   });
 
   afterEach(() => {
-    // Restaurar el espía después de cada prueba
     alertControllerSpy.calls.reset();
-    // Restaurar localStorage a su estado original
     localStorage.clear();
   });
 
-  it('should create the component', () => {
+  it('debería crear el componente correctamente', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should retrieve pets from localStorage if available', () => {
+  it('debería recuperar las mascotas de localStorage si están disponibles', () => {
     const mockPets = [{ nombre: 'Fido' }] as pets[];
     spyOn(localStorage, 'getItem').and.returnValue(JSON.stringify(mockPets));
 
@@ -63,7 +60,7 @@ describe('TabAdopcionPage', () => {
     expect(component.mascs).toEqual(mockPets);
   });
 
-  it('should store fetched pets in localStorage', () => {
+  it('debería almacenar las mascotas obtenidas en localStorage', () => {
     const mockPets = [{ nombre: 'Fido', desc_adicional: '', desc_fisica: '', desc_personalidad: '' }] as pets[];
     spyOn(localStorage, 'getItem').and.returnValue(null);
     spyOn(apiPetService, 'obtenerPets').and.returnValue(of({ data: mockPets } as any));
@@ -75,10 +72,9 @@ describe('TabAdopcionPage', () => {
     expect(setItemSpy).toHaveBeenCalledWith('mascotas', JSON.stringify(mockPets));
   });
 
-  it('should handle valid adoption request', async () => {
+  it('debería manejar correctamente una solicitud de adopción válida', async () => {
     const mockPet = { nombre: 'Fido' } as pets;
 
-    // Usar el espía configurado en el beforeEach
     await component.adoptarMascota(mockPet);
 
     expect(alertControllerSpy).toHaveBeenCalledWith(jasmine.objectContaining({
@@ -86,11 +82,9 @@ describe('TabAdopcionPage', () => {
     }));
   });
 
-  it('should call alertController with correct data on adoption request', async () => {
+  it('debería llamar al alertController con datos correctos en la solicitud de adopción', async () => {
     const mockPet = { nombre: 'Fido' } as pets;
-    const adoptionData = { name: 'John', phone: '12345678' };
 
-    // Usar el espía configurado en el beforeEach
     await component.adoptarMascota(mockPet);
 
     expect(alertControllerSpy).toHaveBeenCalledWith(jasmine.objectContaining({
@@ -98,11 +92,10 @@ describe('TabAdopcionPage', () => {
     }));
   });
 
-  it('should display error if adoption request has invalid phone', async () => {
+  it('debería mostrar un error si el teléfono en la solicitud de adopción es inválido', async () => {
     const mockPet = { nombre: 'Fido' } as pets;
     const adoptionData = { name: 'John', phone: 'invalidPhone' };
 
-    // Actualizar el espía para simular la creación de la alerta
     alertControllerSpy.and.callFake(async (options: any) => {
       return {
         present: async () => {
@@ -122,16 +115,15 @@ describe('TabAdopcionPage', () => {
     }));
   });
 
-  it('should validate phone format correctly', () => {
+  it('debería validar correctamente el formato del teléfono', () => {
     expect(component.isValidPhone('123456789')).toBeTrue();
     expect(component.isValidPhone('12345')).toBeFalse();
     expect(component.isValidPhone('abcdefghi')).toBeFalse();
   });
 
-  it('should handle valid adoption request without spy', async () => {
+  it('debería manejar correctamente una solicitud de adopción válida sin usar un espía', async () => {
     const mockPet = { nombre: 'Fido' } as pets;
 
-    // Actualiza el comportamiento del spy solo en esta prueba, si es necesario
     alertControllerSpy.and.callFake(async (options: any) => {
       return {
         present: async () => {

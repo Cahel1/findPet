@@ -27,24 +27,24 @@ describe('NuevaMascotaPage', () => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
   });
 
-  it('should create', () => {
+  it('debería crear el componente correctamente', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should retrieve capturedImage from localStorage on ngOnInit', () => {
+  it('debería recuperar la imagen capturada desde el localStorage en ngOnInit', () => {
     const mockImage = 'mockImageData';
     spyOn(localStorage, 'getItem').and.returnValue(mockImage);
     component.ngOnInit();
     expect(component.capturedImage).toBe(mockImage);
   });
 
-  it('should navigate to /tab-home when volverHome is called', () => {
+  it('debería navegar a /tab-home cuando se llame a volverHome', () => {
     const navigateSpy = spyOn(router, 'navigate');
     component.volverHome();
     expect(navigateSpy).toHaveBeenCalledWith(['/tab-home']);
   });
 
-  it('should show error alert if fields are incomplete when enviarMascota is called', async () => {
+  it('debería mostrar una alerta de error si los campos están incompletos al llamar a enviarMascota', async () => {
     component.nombre = '';
     const alertSpy = spyOn(alertController, 'create').and.callThrough();
     await component.enviarMascota();
@@ -56,7 +56,7 @@ describe('NuevaMascotaPage', () => {
     });
   });
 
-  it('should show error alert if correo is invalid when enviarMascota is called', async () => {
+  it('debería mostrar una alerta de error si el correo es inválido al llamar a enviarMascota', async () => {
     component.nombre = 'Mascota 1';
     component.tipo = 'Perro';
     component.descripcion = 'Descripción';
@@ -72,7 +72,4 @@ describe('NuevaMascotaPage', () => {
       buttons: ['OK'],
     });
   });
-  
-
-  
 });

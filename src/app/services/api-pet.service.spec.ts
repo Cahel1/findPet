@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { ApiPetService } from './api-pet.service';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('ApiPetService', () => {
+describe('Servicio ApiPetService', () => {
   let service: ApiPetService;
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe('ApiPetService', () => {
     service = TestBed.inject(ApiPetService);
   });
 
-  it('should be created', () => {
+  it('debería crear el servicio correctamente', () => {
     expect(service).toBeTruthy();
   });
 });
