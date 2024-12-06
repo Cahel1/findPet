@@ -17,8 +17,8 @@ describe('TabHomePage', () => {
         HttpClientModule,
         IonicModule,
         CommonModule
-      ], 
-      providers: [ApiPetService], 
+      ],
+      providers: [ApiPetService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TabHomePage);
@@ -27,7 +27,7 @@ describe('TabHomePage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('debería crear el componente correctamente', () => {
     expect(component).toBeTruthy();
   });
 });
