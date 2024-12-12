@@ -29,8 +29,12 @@
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Descripción</ion-label>
-        <ion-textarea [(ngModel)]="descripcion"></ion-textarea>
+        <ion-label position="floating">Descripción Física</ion-label>
+        <ion-textarea [(ngModel)]="descripcionFisica"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Personalidad</ion-label>
+        <ion-textarea [(ngModel)]="personalidad"></ion-textarea>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Edad</ion-label>
@@ -39,6 +43,21 @@
       <ion-item>
         <ion-label position="floating">Correo de Contacto</ion-label>
         <ion-input [(ngModel)]="correo" type="email"></ion-input>
+      </ion-item>
+
+      <!-- Nuevo campo para seleccionar la comuna -->
+      <ion-item>
+        <ion-label position="floating">Comuna</ion-label>
+        <ion-select [(ngModel)]="comuna">
+          <ion-select-option value="Providencia">Providencia</ion-select-option>
+          <ion-select-option value="Las Condes">Las Condes</ion-select-option>
+          <ion-select-option value="Ñuñoa">Ñuñoa</ion-select-option>
+          <ion-select-option value="Santiago Centro">Santiago Centro</ion-select-option>
+          <ion-select-option value="Peñalolén">Peñalolén</ion-select-option>
+          <ion-select-option value="Macul">Macul</ion-select-option>
+          <ion-select-option value="La Florida">La Florida</ion-select-option>
+          <ion-select-option value="Maipú">Maipú</ion-select-option>
+        </ion-select>
       </ion-item>
     </ion-list>
 
