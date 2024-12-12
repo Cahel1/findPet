@@ -9,8 +9,8 @@ import { ApiPetService } from 'src/app/services/api-pet.service';
   styleUrls: ['./tab-adopcion.page.scss'],
 })
 export class TabAdopcionPage implements OnInit {
-  mascs: pets[] = [];
-
+  mascs: pets[] = []; // Aquí se almacenan todas las mascotas (API + localStorage)
+  capturedImages: { [id: string]: string } = {};
   constructor(
     private apiPetService: ApiPetService, // Servicio API
     private alertController: AlertController
@@ -20,10 +20,16 @@ export class TabAdopcionPage implements OnInit {
     this.obtenerMascotas(); // Obtener las mascotas al iniciar
   }
 
+  // Este ciclo de vida se ejecuta cada vez que la vista se va a mostrar
+  ionViewWillEnter() {
+    this.obtenerMascotas(); // Actualizar las mascotas cada vez que la vista se recarga
+  }
+
+  // Obtener mascotas desde localStorage o desde la API si no hay en localStorage
   obtenerMascotas(): void {
     const petitos = localStorage.getItem('mascotas');
     if (petitos) {
-      this.mascs = JSON.parse(petitos);
+      this.mascs = JSON.parse(petitos); // Las mascotas deben venir ya en orden correcto
     } else {
       this.apiPetService.obtenerPets().subscribe((respuesta) => {
         this.mascs = respuesta.data.map((masc) => ({
@@ -37,12 +43,12 @@ export class TabAdopcionPage implements OnInit {
     }
   }
 
-  // Limpieza de etiquetas HTML
+  // Limpieza de etiquetas HTML en las descripciones
   stripHTML(html: string): string {
     return html ? html.replace(/<\/?[^>]+(>|$)/g, '') : '';
   }
 
-  // Validar formato del teléfono
+  // Validar el formato del teléfono
   isValidPhone(phone: string): boolean {
     const phonePattern = /^[0-9]{9}$/;
     return phonePattern.test(phone);
