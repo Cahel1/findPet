@@ -1,11 +1,11 @@
 :host {
   ion-header {
-    --background: #1e90ff; /* Azul moderno */
-    --color: #ffffff; /* Texto blanco */
+    --background: #1e90ff;
+    --color: #ffffff;
 
     ion-toolbar {
       display: flex;
-      justify-content: center; /* Centra el contenido del toolbar */
+      justify-content: center;
       align-items: center;
     }
 
@@ -15,12 +15,12 @@
       transform: translateX(-50%);
       font-size: 20px;
       font-weight: bold;
-      color: rgb(3, 0, 0); /* Color oscuro */
+      color: rgb(3, 0, 0);
     }
   }
 
   ion-content {
-    --background: #f4f7fc; /* Fondo claro */
+    --background: #f4f7fc;
     display: flex;
     flex-direction: column;
     align-items: center;

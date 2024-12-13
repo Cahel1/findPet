@@ -11,8 +11,8 @@ export class NuevaMascotaPage implements OnInit {
   capturedImage: string | null = null;
   nombre: string = '';
   tipo: string = '';
-  descripcionFisica: string = ''; // Descripción física
-  personalidad: string = ''; // Personalidad
+  descripcionFisica: string = '';
+  personalidad: string = '';
   edad: string = '';
   correo: string = '';
   comuna: string = '';
@@ -20,13 +20,29 @@ export class NuevaMascotaPage implements OnInit {
   constructor(private router: Router, private alertController: AlertController) {}
 
   ngOnInit() {
-    // Recuperar la imagen desde localStorage
+
     this.capturedImage = localStorage.getItem('capturedImage');
   }
 
-  // Función para volver al tab-home
+
+  captureImage(imageData: string) {
+    this.capturedImage = imageData;
+    localStorage.setItem('capturedImage', this.capturedImage);
+  }
+
+
   volverHome() {
     this.router.navigate(['/tab-home']);
+  }
+
+  resetForm() {
+    this.nombre = '';
+    this.tipo = '';
+    this.descripcionFisica = '';
+    this.personalidad = '';
+    this.edad = '';
+    this.correo = '';
+    this.comuna = '';
   }
 
   async enviarMascota() {
@@ -45,21 +61,16 @@ export class NuevaMascotaPage implements OnInit {
       const nuevaMascota = {
         nombre: this.nombre,
         tipo: this.tipo,
-        desc_fisica: this.descripcionFisica, // Cambié el nombre de "descripcionFisica" a "desc_fisica"
-        desc_personalidad: this.personalidad, // Cambié el nombre de "personalidad" a "desc_personalidad"
+        desc_fisica: this.descripcionFisica,
+        desc_personalidad: this.personalidad,
         edad: this.edad,
         correo: this.correo,
         comuna: this.comuna,
         imagen: this.capturedImage,
       };
 
-      // Obtener las mascotas almacenadas en localStorage
       let mascotas = JSON.parse(localStorage.getItem('mascotas') || '[]');
-
-      // Insertar la nueva mascota al principio de la lista
-      mascotas.unshift(nuevaMascota); // Agregar la nueva mascota al inicio del array
-
-      // Guardar la lista actualizada en localStorage
+      mascotas.unshift(nuevaMascota);
       localStorage.setItem('mascotas', JSON.stringify(mascotas));
 
       const alert = await this.alertController.create({
@@ -69,7 +80,9 @@ export class NuevaMascotaPage implements OnInit {
           {
             text: 'OK',
             handler: () => {
-              // Navegar al tab de adopción y actualizar la vista
+
+              this.capturedImage = null;
+              this.resetForm();
               this.router.navigate(['/tab-adopcion']);
             },
           },

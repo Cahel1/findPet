@@ -9,7 +9,7 @@
 
 <ion-content class="ion-padding">
   <div class="container">
-    <!-- Mostrar la imagen capturada -->
+
     <ion-img class="centered-image" [src]="capturedImage" *ngIf="capturedImage"></ion-img>
 
     <!-- Formulario para los datos -->
@@ -45,7 +45,6 @@
         <ion-input [(ngModel)]="correo" type="email"></ion-input>
       </ion-item>
 
-      <!-- Nuevo campo para seleccionar la comuna -->
       <ion-item>
         <ion-label position="floating">Comuna</ion-label>
         <ion-select [(ngModel)]="comuna">

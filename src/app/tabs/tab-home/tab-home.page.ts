@@ -9,8 +9,8 @@ import { IonicSlides } from '@ionic/angular';
   styleUrls: ['./tab-home.page.scss'],
 })
 export class TabHomePage implements OnInit {
-  mascs: pets[] = []; // Variable para almacenar las mascotas
-  swiperModules = [IonicSlides]; // Se asegura de importar IonicSlides
+  mascs: pets[] = [];
+  swiperModules = [IonicSlides];
 
   constructor(
     private apiPetService: ApiPetService // Inyectamos el servicio para hacer la llamada a la API

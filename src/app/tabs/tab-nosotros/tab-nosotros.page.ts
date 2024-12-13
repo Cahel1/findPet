@@ -12,7 +12,6 @@ export class TabNosotrosPage implements OnInit {
 
   ngOnInit() {}
 
-  // Manejo de la solicitud para unirse a la causa
   async uneteACausa(): Promise<void> {
     const alert = await this.alertController.create({
       header: 'Únete a nuestra causa',

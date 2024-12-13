@@ -9,27 +9,26 @@ import { ApiPetService } from 'src/app/services/api-pet.service';
   styleUrls: ['./tab-adopcion.page.scss'],
 })
 export class TabAdopcionPage implements OnInit {
-  mascs: pets[] = []; // Aquí se almacenan todas las mascotas (API + localStorage)
-  capturedImages: { [id: string]: string } = {};
+  mascs: pets[] = [];
+  capturedImages: string[] = [];
+
   constructor(
-    private apiPetService: ApiPetService, // Servicio API
+    private apiPetService: ApiPetService,
     private alertController: AlertController
   ) {}
 
   ngOnInit(): void {
-    this.obtenerMascotas(); // Obtener las mascotas al iniciar
+    this.obtenerMascotas();
   }
 
-  // Este ciclo de vida se ejecuta cada vez que la vista se va a mostrar
   ionViewWillEnter() {
-    this.obtenerMascotas(); // Actualizar las mascotas cada vez que la vista se recarga
+    this.obtenerMascotas();
   }
 
-  // Obtener mascotas desde localStorage o desde la API si no hay en localStorage
   obtenerMascotas(): void {
     const petitos = localStorage.getItem('mascotas');
     if (petitos) {
-      this.mascs = JSON.parse(petitos); // Las mascotas deben venir ya en orden correcto
+      this.mascs = JSON.parse(petitos);
     } else {
       this.apiPetService.obtenerPets().subscribe((respuesta) => {
         this.mascs = respuesta.data.map((masc) => ({
@@ -41,20 +40,19 @@ export class TabAdopcionPage implements OnInit {
         localStorage.setItem('mascotas', JSON.stringify(this.mascs));
       });
     }
+    const capturedImages = JSON.parse(localStorage.getItem('capturedImages') || '[]');
+    this.capturedImages = capturedImages;
   }
 
-  // Limpieza de etiquetas HTML en las descripciones
   stripHTML(html: string): string {
     return html ? html.replace(/<\/?[^>]+(>|$)/g, '') : '';
   }
 
-  // Validar el formato del teléfono
   isValidPhone(phone: string): boolean {
     const phonePattern = /^[0-9]{9}$/;
     return phonePattern.test(phone);
   }
 
-  // Manejo de solicitud de adopción
   async adoptarMascota(mascota: pets): Promise<void> {
     const alert = await this.alertController.create({
       header: `¿Adoptar a ${mascota.nombre}?`,
@@ -91,21 +89,20 @@ export class TabAdopcionPage implements OnInit {
                 telefono: data.phone,
               });
 
-              // Mostrar una alerta de éxito
               this.alertController.create({
                 header: 'Éxito',
                 message: 'Tu solicitud de adopción ha sido enviada.',
                 buttons: ['OK'],
               }).then(alert => alert.present());
 
-              return true; // Asegura que el valor se devuelve
+              return true;
             } else {
               this.alertController.create({
                 header: 'Error',
                 message: 'Por favor, completa todos los campos correctamente.',
                 buttons: ['OK'],
               }).then(alert => alert.present());
-              return false;  // Devuelve false si los datos no son válidos
+              return false;
             }
           },
         },
